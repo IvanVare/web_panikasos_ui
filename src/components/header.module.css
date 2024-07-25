@@ -1,0 +1,30 @@
+.header {
+  background: #949494;
+  color: rgb(212, 177, 177);
+  height: 100px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: decimal;
+  padding-right: 20px;
+}
+
+ul li {
+  display: inline-block;
+  line-height: 80px;
+}
+
+ul li a {
+  display: contents;
+  text-decoration: double;
+}
+
+ul li a:hover {
+  background: #3d617e;
+}
