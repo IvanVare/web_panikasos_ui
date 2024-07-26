@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { CarouselImages } from "./CarouselImages.js";
-import "./carouselBody.css";
+import { CarouselImages } from "../data/CarouselImages.js";
+import "./styles/carouselBody.css";
 
 function CarouselBody() {
   const listRef = useRef();
