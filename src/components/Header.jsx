@@ -7,38 +7,32 @@ function Header() {
     <>
       <div className={styles.header}>
         <nav>
-          <ul className="nav">
+          <ul>
             <li>
-              <div className=" container">
-                <a className="navbar-brand" href="#">
-                  <img
-                    src="https://www.ciisder.mx/images/logos/logo_uatx_2019.png"
-                    alt="bos"
-                    width={70}
-                    height={70}
-                  />
-                </a>
-              </div>
+              <img
+                src="https://www.ciisder.mx/images/logos/logo_uatx_2019.png"
+                alt="bos"
+                width={50}
+                height={50}
+              />
             </li>
-            <li className=" nav-item">
-              <a className="nav-link active" aria-current="page" href="/Home">
+            <li>
+              <a className="" href="/Home">
                 Inicio
               </a>
             </li>
-            <li className="nb_header nav-item">
-              <a className="nav-link" href="/Acerca">
+            <li>
+              <a className="" href="/Acerca">
                 Acerca de
               </a>
             </li>
-            <li className="nb_header nav-item">
-              <a className="nb_header nav-link" href="/Funciones">
+            <li>
+              <a className="" href="/Funciones">
                 Funciones
               </a>
             </li>
-            <li className="nb_header nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Descargar
-              </a>
+            <li>
+              <a className="">Descargar</a>
             </li>
           </ul>
         </nav>

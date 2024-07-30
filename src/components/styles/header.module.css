@@ -1,36 +1,58 @@
 .header {
-  background-color: #cacaca;
+  background-color: #000000;
   color: rgb(255, 0, 0);
-  height: 100px;
+  height: 70px;
   width: 100%;
   left: 0;
   top: 0;
   position: fixed;
-  padding: 1rem;
-  width: 100%;
+
   z-index: 1000;
 }
 
 ul {
-  margin: 10;
-  padding: 0;
-  list-style: armenian;
-  padding-right: 20px;
-  justify-content: left;
+  list-style: none;
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between;
+  padding-left: 20px;
+  margin: 0;
 }
 
 ul li {
-  display: inline-;
-  line-height: 60px;
+  display: inline-block;
+  padding-top: 10px;
 }
 
 ul li a {
+  position: relative;
   display: flex;
-  text-decoration: line-through;
-  border-radius: 50%;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  padding: 0 12px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin-right: 2rem;
+  padding-right: 20px;
+  border-bottom: 1rem;
+}
+
+ul li a:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 0, 76);
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+ul li a:hover::after {
+  width: 100%;
+  color: rgb(255, 0, 76);
 }
 
 ul li a:hover {
-  background: #8b2121b4;
-  border-radius: 50%;
+  color: rgb(255, 0, 76);
 }
