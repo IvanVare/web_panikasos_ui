@@ -6,11 +6,11 @@ function Header() {
   return (
     <>
       <div className={styles.header}>
-        <nav class="navbar ">
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <div class="container">
-                <a class="navbar-brand" href="#">
+        <nav>
+          <ul className="nav">
+            <li>
+              <div className=" container">
+                <a className="navbar-brand" href="#">
                   <img
                     src="https://www.ciisder.mx/images/logos/logo_uatx_2019.png"
                     alt="bos"
@@ -20,23 +20,23 @@ function Header() {
                 </a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/Home">
+            <li className=" nav-item">
+              <a className="nav-link active" aria-current="page" href="/Home">
                 Inicio
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Acerca">
+            <li className="nb_header nav-item">
+              <a className="nav-link" href="/Acerca">
                 Acerca de
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Funciones">
+            <li className="nb_header nav-item">
+              <a className="nb_header nav-link" href="/Funciones">
                 Funciones
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">
+            <li className="nb_header nav-item">
+              <a className="nav-link disabled" aria-disabled="true">
                 Descargar
               </a>
             </li>

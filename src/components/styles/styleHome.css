@@ -1,8 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
 .content {
-  padding-top: 80px; /* Adjust this value to the height of your navbar */
+  padding-top: 120px; /* Adjust this value to the height of your navbar */
+  padding-top: 120px; /* Adjust this value to the height of your navbar */
+  padding-inline-start: 30px;
+  padding-inline-end: 20px;
+  background-color: #2e2e2e;
+  color: aliceblue;
+  position: relative;
+  width: 100%;
 }
 
 /* Additional styling for the content */
-.main-content {
-  padding: 20px;
+
+.cards-content {
+  background: #000;
+  background-color: rgb(71, 71, 71);
+  text-shadow: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: oblique;
+  color: rgb(216, 216, 216);
+}
+
+.title-style {
+  color: red;
+  font-size: larger;
+  font-weight: 200;
 }

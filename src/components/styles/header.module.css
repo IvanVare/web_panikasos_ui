@@ -1,33 +1,36 @@
 .header {
-  background: #949494;
-  color: rgb(212, 177, 177);
+  background-color: #cacaca;
+  color: rgb(255, 0, 0);
   height: 100px;
   width: 100%;
   left: 0;
   top: 0;
   position: fixed;
-  width: 100%;
   padding: 1rem;
+  width: 100%;
   z-index: 1000;
 }
 
 ul {
-  margin: 0;
+  margin: 10;
   padding: 0;
-  list-style: decimal;
+  list-style: armenian;
   padding-right: 20px;
+  justify-content: left;
 }
 
 ul li {
-  display: inline-block;
-  line-height: 80px;
+  display: inline-;
+  line-height: 60px;
 }
 
 ul li a {
-  display: contents;
-  text-decoration: double;
+  display: flex;
+  text-decoration: line-through;
+  border-radius: 50%;
 }
 
 ul li a:hover {
-  background: #3d617e;
+  background: #8b2121b4;
+  border-radius: 50%;
 }

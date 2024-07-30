@@ -15,8 +15,8 @@ img {
 /* Main container */
 
 .main-container {
-  width: 600px;
-  height: 520px;
+  width: 220px;
+  height: 300px;
   margin: auto;
   position: relative;
   top: 20%;
@@ -80,8 +80,8 @@ img {
 }
 
 .class-images {
-  width: 600px;
-  height: 520px;
+  width: 220px;
+  height: 300px;
   border: 20px solid black;
   border-radius: 5%; /* Puedes cambiar el grosor, estilo y color */
 }

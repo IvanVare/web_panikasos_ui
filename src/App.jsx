@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HeaderNav from "./components/Header";
+import FooterBody from "./components/Footer";
 import Home from "./pages/Home";
 import Aboutus from "./pages/Aboutus";
 import Functions from "./pages/Functions";
@@ -15,6 +16,7 @@ function App() {
           <Route path="/Funciones" element={<Functions></Functions>}></Route>
         </Route>
       </Routes>
+      <FooterBody />
     </>
   );
 }
