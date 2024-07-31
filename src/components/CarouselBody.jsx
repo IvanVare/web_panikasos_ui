@@ -1,74 +1,66 @@
-import React, { useEffect, useRef, useState } from "react";
-import { CarouselImages } from "../data/CarouselImages.js";
+import React, { useState } from "react";
+import styled from "styled-components";
 import "./styles/carouselBody.css";
 
-function CarouselBody() {
-  const listRef = useRef();
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Importar las imágenes estáticamente
+import interfaz1 from "../assets/images/interfaz1.png";
+import interfaz2 from "../assets/images/interfaz2.png";
+import interfaz3 from "../assets/images/interfaz3.png";
 
-  useEffect(() => {
-    const listNode = listRef.current;
-    const imageNode = listNode.querySelectorAll("li > img")[currentIndex];
-    if (imageNode) {
-      imageNode.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  }, [currentIndex]);
+const CarouselImg = styled.img`
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: 1s;
+  &.loaded {
+    opacity: 1;
+  }
+`;
 
-  const scrollToImage = (direction) => {
-    if (direction == "prev") {
-      setCurrentIndex((curr) => {
-        const isFirstSlide = currentIndex === 0;
-        return isFirstSlide ? 0 : curr - 1;
-      });
-    } else {
-      const isLastSlide = currentIndex === CarouselImages.length - 1;
-      if (!isLastSlide) {
-        setCurrentIndex((curr) => curr + 1);
-      }
-    }
+function CarouselBody(props) {
+  const images = [interfaz1, interfaz2, interfaz3];
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [loaded, setLoaded] = useState(false);
+
+  const selectNewImage = (index, images, next = true) => {
+    setLoaded(false);
+    setTimeout(() => {
+      const condition = next
+        ? selectedIndex < images.length - 1
+        : selectedIndex > 0;
+      const nextIndex = next
+        ? condition
+          ? selectedIndex + 1
+          : 0
+        : condition
+        ? selectedIndex - 1
+        : images.length - 1;
+      console.log(selectedIndex);
+      setSelectedImage(images[nextIndex]);
+      setSelectedIndex(nextIndex);
+    }, 500);
   };
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
+  const previous = () => {
+    selectNewImage(selectedIndex, images, false);
+  };
+
+  const next = () => {
+    selectNewImage(selectedIndex, images);
   };
   return (
     <>
-      <div className="main-container">
-        <div className="slider-container">
-          <button className="leftArrow" onClick={() => scrollToImage("prev")}>
-            &#10092;
-          </button>
-          <button className="rightArrow" onClick={() => scrollToImage("next")}>
-            &#10093;
-          </button>
-          <div className="container-images">
-            <ul ref={listRef}>
-              {CarouselImages.map((item) => {
-                return (
-                  <li key={item.id}>
-                    <img className="class-images" src={item.imgUrl} />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div className="dots-container">
-            {CarouselImages.map((_, idx) => (
-              <div
-                onClick={() => goToSlide(idx)}
-                key={idx}
-                className={`dot-container-item ${
-                  idx === currentIndex ? "active" : ""
-                }`}
-              >
-                &#9864;
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <CarouselImg
+        src={selectedImage}
+        alt="imagen"
+        className={loaded ? "loaded" : ""}
+        onLoad={() => setLoaded(true)}
+      />
+
+      <button onClick={previous}>&#10092;</button>
+      <button onClick={next}>&#10093;</button>
     </>
   );
 }

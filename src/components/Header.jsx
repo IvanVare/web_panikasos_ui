@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./styles/header.module.css";
 import { Outlet } from "react-router-dom";
-
 function Header() {
   return (
     <>
@@ -10,9 +9,9 @@ function Header() {
           <ul>
             <li>
               <img
-                src="https://www.ciisder.mx/images/logos/logo_uatx_2019.png"
+                src="src/assets/images/icon_panikasos_night.png"
                 alt="bos"
-                width={50}
+                width={52}
                 height={50}
               />
             </li>

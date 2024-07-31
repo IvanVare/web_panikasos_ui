@@ -1,31 +1,35 @@
-* {
-  box-sizing: border-box;
-}
-
-.content {
-  padding-top: 120px; /* Adjust this value to the height of your navbar */
-  padding-top: 120px; /* Adjust this value to the height of your navbar */
-  padding-inline-start: 30px;
-  padding-inline-end: 20px;
-  background-color: #2e2e2e;
+.home-content {
   color: aliceblue;
-  position: relative;
-  width: 100%;
+  padding-inline: 30px;
+
+  background-color: rgba(78, 78, 78, 0.884);
 }
 
-/* Additional styling for the content */
-
-.cards-content {
-  background: #000;
-  background-color: rgb(71, 71, 71);
-  text-shadow: 20px;
-  font-family: "Courier New", Courier, monospace;
-  font-style: oblique;
-  color: rgb(216, 216, 216);
+.home-content-span {
+  color: rgb(153, 15, 15);
+  text-decoration: double;
+  letter-spacing: 7px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  font-size: 50px;
 }
 
-.title-style {
-  color: red;
-  font-size: larger;
-  font-weight: 200;
+.home-content-message {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+  color: rgb(32, 32, 32);
+  height: 70vh;
+  margin-inline: 50px;
+  font-weight: bold;
+  span {
+    color: rgb(224, 59, 59);
+    font-weight: 400;
+  }
 }
