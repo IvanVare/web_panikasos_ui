@@ -1,8 +1,8 @@
 .home-content {
   color: aliceblue;
   padding-inline: 30px;
-
-  background-color: rgba(78, 78, 78, 0.884);
+  padding-block: 30px;
+  background-color: rgb(43, 43, 43);
 }
 
 .home-content-span {
@@ -32,4 +32,35 @@
     color: rgb(224, 59, 59);
     font-weight: 400;
   }
+}
+
+.home-content-card {
+}
+
+.card {
+  display: flex;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card1 {
+  width: 60%;
+  max-width: 60%;
+  z-index: 1;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%);
+  top: 20px; /* Adjust to your preference */
+}
+
+.card2 {
+  width: 60%;
+  max-width: 60%;
+  z-index: 1;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%);
+  /* Adjust to your preference */
+  left: 40%; /* Adjust to your preference */
+  border-radius: 8px;
 }

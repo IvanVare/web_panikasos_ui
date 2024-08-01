@@ -7,8 +7,20 @@ import interfaz1 from "../assets/images/interfaz1.png";
 import interfaz2 from "../assets/images/interfaz2.png";
 import interfaz3 from "../assets/images/interfaz3.png";
 
+const CarouselImgMargin = styled.div`
+  display: flex;
+  background-color: #000000;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5%;
+  border: 5px solid rgb(255, 255, 255);
+  margin: 20px;
+  padding: 20px;
+`;
+
 const CarouselImg = styled.img`
-  max-width: 200px;
+  max-width: 300px;
+  align-content: center;
   width: 100%;
   height: auto;
   opacity: 0;
@@ -16,6 +28,36 @@ const CarouselImg = styled.img`
   &.loaded {
     opacity: 1;
   }
+`;
+
+const CarouselButtonRight = styled.button`
+  position: absolute;
+  top: 70%;
+  height: 10%;
+  width: 5%;
+  right: 65px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #ff0000;
+  z-index: 1;
+  background-color: #ffffff;
+  border-radius: 10%;
+  border: 2px solid black;
+`;
+
+const CarouselButtonLeft = styled.button`
+  position: absolute;
+  top: 70%;
+  height: 10%;
+  width: 5%;
+  left: 65px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  z-index: 1;
+  background-color: #ffffff;
+  border-radius: 10%;
+  border: 2px solid black;
 `;
 
 function CarouselBody(props) {
@@ -52,15 +94,16 @@ function CarouselBody(props) {
   };
   return (
     <>
-      <CarouselImg
-        src={selectedImage}
-        alt="imagen"
-        className={loaded ? "loaded" : ""}
-        onLoad={() => setLoaded(true)}
-      />
-
-      <button onClick={previous}>&#10092;</button>
-      <button onClick={next}>&#10093;</button>
+      <CarouselImgMargin>
+        <CarouselButtonLeft onClick={previous}>&#10092;</CarouselButtonLeft>
+        <CarouselImg
+          src={selectedImage}
+          alt="imagen"
+          className={loaded ? "loaded" : ""}
+          onLoad={() => setLoaded(true)}
+        />
+        <CarouselButtonRight onClick={next}>&#10093;</CarouselButtonRight>
+      </CarouselImgMargin>
     </>
   );
 }
