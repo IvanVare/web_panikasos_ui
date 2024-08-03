@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "../components/Card.jsx";
+import Cards from "../components/Cards.jsx";
 import "../components/styles/styleAboutUs.css";
 
 const ImageSchool = styled.img`
   width: 30%;
   max-width: 50%;
-  background-color: red;
 `;
 
 const users = [
@@ -14,15 +14,15 @@ const users = [
     id: 1,
     title: "Ivan",
     descriprion: "jdjsdga",
-    image: "https://cdn-icons-png.flaticon.com/512/9187/9187604.png",
+    image:
+      "https://scontent.fpbc4-1.fna.fbcdn.net/v/t39.30808-1/330296746_8679805508761000_1006268750703738412_n.jpg?stp=c97.0.200.200a_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=VyPkXwNJGQ4Q7kNvgF9BW2y&_nc_ht=scontent.fpbc4-1.fna&oh=00_AYCIkDqa6IZd2VjVE2rGthghJnO--56jR08hIdznSzyF2g&oe=66B37045",
     urlLinkedin: "https://www.google.com/",
   },
   {
     id: 2,
     title: "Antonio",
     descriprion: "Desarrollador de la pagina",
-    image:
-      "https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+    image: "https://www.svgrepo.com/show/192244/man-user.svg",
     urlLinkedin: "https://www.facebook.com/",
   },
 ];
@@ -30,7 +30,6 @@ const users = [
 export default function Aboutus() {
   return (
     <>
-      <h1>Aboutus</h1>
       <div>
         <div className="appcontent-section">
           <div className="image-container">
@@ -61,19 +60,17 @@ export default function Aboutus() {
           </div>
         </div>
 
-        <div className="container cards-container">
-          <div className="row">
-            {users.map((userCard) => (
-              <div className="col-md-3" key={userCard.id}>
-                <Card
-                  title={userCard.title}
-                  imageUrl={userCard.image}
-                  descriprion={userCard.descriprion}
-                  urlLinkedin={userCard.urlLinkedin}
-                ></Card>
-              </div>
-            ))}
-          </div>
+        <div className="row">
+          {users.map((userCard) => (
+            <div className="col cards-container" key={userCard.id}>
+              <Card
+                title={userCard.title}
+                imageUrl={userCard.image}
+                descriprion={userCard.descriprion}
+                urlLinkedin={userCard.urlLinkedin}
+              ></Card>
+            </div>
+          ))}
         </div>
       </div>
     </>
