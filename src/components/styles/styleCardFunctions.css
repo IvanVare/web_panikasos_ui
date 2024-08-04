@@ -1,0 +1,30 @@
+.container-cards-group {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 20px 30px;
+}
+
+.cards-container-div {
+}
+
+.cardF {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #0000004d;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 5px 5px hsla(0, 0%, 0%, 0.432);
+}
+
+.cardF-continer {
+  align-items: center;
+  background-color: rgba(255, 0, 0, 0.116);
+}
+
+.cardF:hover {
+  background-color: rgba(255, 0, 0, 0.534);
+  .cardF-continer {
+    background-color: rgb(255, 0, 0);
+  }
+}

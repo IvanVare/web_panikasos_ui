@@ -1,31 +1,24 @@
 import React from "react";
-export default function CardFunctions() {
+import styled from "styled-components";
+import "../components/styles/styleCardFunctions.css";
+
+const ImageContainer = styled.img`
+  max-width: 100px;
+  min-width: 20px;
+  border-radius: 20%;
+`;
+
+export default function CardFunctions({ title, imageUrl, descriprion }) {
   return (
     <>
       <div className="col">
-        <div className="card">
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p className="card-text">
-                <small className="text-body-secondary">
-                  Last updated 3 mins ago
-                </small>
-              </p>
-            </div>
+        <div className="cardF">
+          <div className="card cardF-continer">
+            <ImageContainer src={imageUrl} alt={title} />
           </div>
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
+            <h5 className="card-title">{title}</h5>
+            <p className="card-text">{descriprion}</p>
           </div>
         </div>
       </div>
