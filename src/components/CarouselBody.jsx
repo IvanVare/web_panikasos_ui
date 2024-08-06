@@ -8,6 +8,7 @@ import interfaz2 from "../assets/images/interfaz2.png";
 import interfaz3 from "../assets/images/interfaz3.png";
 
 const CarouselImgMargin = styled.div`
+  position: relative;
   display: flex;
   background-color: #000000;
   align-items: center;
@@ -16,6 +17,7 @@ const CarouselImgMargin = styled.div`
   border: 5px solid #222222;
   margin: 20px;
   padding: 20px;
+  overflow: hidden;
 `;
 
 const CarouselImg = styled.img`
@@ -32,10 +34,10 @@ const CarouselImg = styled.img`
 
 const CarouselButtonRight = styled.button`
   position: absolute;
-  top: 70%;
+  top: 45%;
   height: 10%;
   width: 5%;
-  right: 65px;
+  right: 10px;
   font-size: 30px;
   font-weight: 900;
   color: #ffffff;
@@ -47,10 +49,10 @@ const CarouselButtonRight = styled.button`
 
 const CarouselButtonLeft = styled.button`
   position: absolute;
-  top: 70%;
+  top: 45%;
   height: 10%;
   width: 5%;
-  left: 65px;
+  left: 10px;
   font-size: 30px;
   font-weight: bold;
   color: #ffffff;

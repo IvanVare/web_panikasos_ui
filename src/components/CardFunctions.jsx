@@ -13,12 +13,12 @@ export default function CardFunctions({ title, imageUrl, descriprion }) {
     <>
       <div className="col">
         <div className="cardF">
-          <div className="card cardF-continer">
+          <div className="cardF cardF-continer">
             <ImageContainer src={imageUrl} alt={title} />
           </div>
           <div className="card-body">
-            <h5 className="card-title">{title}</h5>
-            <p className="card-text">{descriprion}</p>
+            <h5 className="function-card-title">{title}</h5>
+            <p className="function-card-text">{descriprion}</p>
           </div>
         </div>
       </div>

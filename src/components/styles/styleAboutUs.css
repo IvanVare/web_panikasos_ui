@@ -35,9 +35,29 @@
   margin-bottom: 20px;
 }
 
+.aboutus-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #0000004d;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 5px 5px hsla(0, 0%, 0%, 0.432);
+}
+
 .cards-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+}
+
+.aboutus-card-title {
+  text-align: start;
+  font-size: 25px;
+}
+
+.aboutus-card-text {
+  text-align: start;
+}
+
+.card-button a {
+  margin: 0px 5px 0px 0px;
 }
