@@ -54,5 +54,11 @@ ul li a:hover::after {
 }
 
 ul li a:hover {
+  font-weight: bold;
   color: rgb(255, 0, 76);
+}
+
+ul li a.active {
+  font-weight: bold;
+  color: rgb(255, 0, 76); /* O el color que prefieras para el enlace activo */
 }

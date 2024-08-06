@@ -11,9 +11,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HeaderNav />}>
-          <Route path="/Home" element={<Home></Home>}></Route>
-          <Route path="/Acerca" element={<Aboutus></Aboutus>}></Route>
-          <Route path="/Funciones" element={<Functions></Functions>}></Route>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/inicio" element={<Home></Home>}></Route>
+          <Route path="/acerda_de" element={<Aboutus></Aboutus>}></Route>
+          <Route path="/funciones" element={<Functions></Functions>}></Route>
         </Route>
       </Routes>
       <FooterBody />

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles/header.module.css";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+
 function Header() {
   return (
     <>
@@ -16,19 +17,28 @@ function Header() {
               />
             </li>
             <li>
-              <a className="" href="/Home">
+              <NavLink
+                to="/inicio"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
                 Inicio
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="" href="/Acerca">
+              <NavLink
+                to="/acerda_de"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
                 Acerca de
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="" href="/Funciones">
+              <NavLink
+                to="/funciones"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
                 Funciones
-              </a>
+              </NavLink>
             </li>
             <li>
               <a className="">Descargar</a>
