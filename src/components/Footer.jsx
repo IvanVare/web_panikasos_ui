@@ -5,44 +5,36 @@ export default function Footer() {
   return (
     <>
       <div className="footer">
-        <div className="sb_footer section_footer">
-          <div className="sb_footer-links">
+        <footer className=" py-3 my-4 border-top">
+          <div className="sb_footer ">
+            <div className="sb_footer-links">
+              <div className="sb_footer-links_div">
+                <h1>PaniKaSOS</h1>
+                <a className="btn btn-outline-danger">Descargar</a>
+              </div>
+            </div>
             <div className="sb_footer-links_div">
-              <h1>PanikaSOS</h1>
-              <a href="/acercade">
-                <p>Acerca de</p>
+              <h4>Siguenos en... </h4>
+              <a href="#">
+                <p>Facebook</p>
               </a>
-              <a href="/function">
-                <p>Funciones</p>
+              <a href="#">
+                <p>Instagram</p>
+              </a>
+              <a href="#">
+                <p>Twitter</p>
               </a>
             </div>
           </div>
-          <div className="sb_footer-links_div">
-            <h4>Rcursos</h4>
-
-            <a href="/acercade">
-              <p>Acerca de_rec</p>
-            </a>
-            <a href="/function">
-              <p>Funciones_rec</p>
-            </a>
-          </div>
-          <div className="sb_footer-links_div">
-            <h4>Siguenos en </h4>
-            <p>Face</p>
-            <p>Insta</p>
-            <p>TWitter</p>
-          </div>
-
           <div className="sb_footer-below">
             <div className="sb_footer-copyright">
               <p>
-                @{new Date().getFullYear} PanikaSOS. Todos los derechos
+                &copy;{new Date().getFullYear}2024 PaniKaSOS. Todos los derechos
                 reservados
               </p>
             </div>
           </div>
-        </div>
+        </footer>
       </div>
     </>
   );

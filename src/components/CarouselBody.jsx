@@ -13,7 +13,7 @@ const CarouselImgMargin = styled.div`
   align-items: center;
   flex-direction: column;
   border-radius: 5%;
-  border: 5px solid rgb(255, 255, 255);
+  border: 5px solid #222222;
   margin: 20px;
   padding: 20px;
 `;
@@ -38,11 +38,11 @@ const CarouselButtonRight = styled.button`
   right: 65px;
   font-size: 30px;
   font-weight: 900;
-  color: #ff0000;
+  color: #ffffff;
   z-index: 1;
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 10%;
-  border: 2px solid black;
+  border: 2px solid #222222;
 `;
 
 const CarouselButtonLeft = styled.button`
@@ -53,11 +53,11 @@ const CarouselButtonLeft = styled.button`
   left: 65px;
   font-size: 30px;
   font-weight: bold;
-  color: #ff0000;
+  color: #ffffff;
   z-index: 1;
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 10%;
-  border: 2px solid black;
+  border: 2px solid #222222;
 `;
 
 function CarouselBody(props) {
