@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: "build", // Cambia el nombre de la carpeta de salida a 'build'
   },
-  base: "/web-panikasos/",
+  base: "./",
 });
