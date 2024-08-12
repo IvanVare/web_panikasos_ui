@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/styleSignup.css";
+import { useAuth } from "../context/authContext";
 
+import { useNavigate } from "react-router-dom";
 export default function CardSignup() {
+  const [user, setUser] = useState({
+    nameUser: "",
+    email: "",
+    password: "",
+  });
+  const { signup } = useAuth();
+  const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const handleChange = ({ target: { name, value } }) => {
+    setUser({ ...user, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await signup(user.email, user.password);
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
   return (
     <>
       <div id="cardSignup">
@@ -10,14 +33,15 @@ export default function CardSignup() {
             <h2>Bienvenido</h2>
             <div className="underline-title"></div>
           </div>
-          <form method="post" className="form">
+          {error && <p>aasaa{error}</p>}
+          <form className="form" onSubmit={handleSubmit}>
             <label for="user-email">Nombre</label>
             <input
               id="user-email"
               className="form-content"
               type="text"
-              name="name"
-              required
+              name="nameUser"
+              onChange={handleChange}
             />
             <div className="form-border"></div>
 
@@ -27,18 +51,16 @@ export default function CardSignup() {
               className="form-content"
               type="email"
               name="email"
-              autocomplete="on"
-              required
+              onChange={handleChange}
             />
             <div className="form-border"></div>
-
             <label for="user-password">Password</label>
             <input
               id="user-password"
               className="form-content"
               type="password"
               name="password"
-              required
+              onChange={handleChange}
             />
             <div className="form-border"></div>
 
