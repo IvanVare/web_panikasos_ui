@@ -3,9 +3,10 @@ import styled from "styled-components";
 import "./styles/carouselBody.css";
 
 // Importar las imágenes estáticamente
-import interfaz1 from "../assets/images/interfaz1.png";
-import interfaz2 from "../assets/images/interfaz2.png";
-import interfaz3 from "../assets/images/interfaz3.png";
+import interfaz1 from "../assets/images/Imagen1.jpg";
+import interfaz2 from "../assets/images/Imagen2.jpg";
+import interfaz3 from "../assets/images/Imagen3.jpg";
+import interfaz4 from "../assets/images/Imagen4.jpg";
 
 const CarouselImgMargin = styled.div`
   position: relative;
@@ -63,7 +64,7 @@ const CarouselButtonLeft = styled.button`
 `;
 
 function CarouselBody(props) {
-  const images = [interfaz1, interfaz2, interfaz3];
+  const images = [interfaz3, interfaz2, interfaz1, interfaz4];
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [loaded, setLoaded] = useState(false);

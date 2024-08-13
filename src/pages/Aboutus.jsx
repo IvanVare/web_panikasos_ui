@@ -11,7 +11,7 @@ const ImageSchool = styled.img`
 export default function Aboutus() {
   return (
     <>
-      <div>
+      <div className="aboutUs-content">
         <div className="appcontent-section">
           <div className="image-container">
             <ImageSchool
@@ -20,7 +20,7 @@ export default function Aboutus() {
             />
           </div>
           <div className="text-container">
-            <h2>Our leadership</h2>
+            <h2>Nuestra aplicación</h2>
             <p>somos alumnos de la uatx etc etc.</p>
             <a href="/leadership-team" className="link"></a>
             <svg
@@ -40,8 +40,10 @@ export default function Aboutus() {
             </svg>
           </div>
         </div>
-
-        <CardsAboutUs />
+        <div className="content-cards-section">
+          <p id="secction-cards-title">Desarrolladores</p>
+          <CardsAboutUs />
+        </div>
       </div>
     </>
   );
