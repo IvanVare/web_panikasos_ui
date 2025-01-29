@@ -18,8 +18,8 @@ export default function Home() {
 
         <Carrousel />
 
-        <div className="flex gap-10 p-10 ">
-          <div className="card  lg:card-side bg-black shadow-xl border-e-8 border-red-800">
+        <div className="flex flex-col md:flex-row gap-10 md:p-10 ">
+          <div className="card lg:card-side bg-black shadow-xl border-e-8 border-red-800">
             <div className="card-body">
               <h1 className="card-title text-white text-2xl font-bold">
                 ¡Activa Panika SOS y mantente protegido!

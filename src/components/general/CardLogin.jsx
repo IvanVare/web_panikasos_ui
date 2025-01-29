@@ -107,9 +107,6 @@ export default function CardLogin() {
             </div>
           </div>
 
-          <a href="#">
-            <legend id="forgot-pass">Forgot password?</legend>
-          </a>
           <input
             id="submit-btn"
             type="submit"

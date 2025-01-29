@@ -3,7 +3,7 @@ import React from "react";
 // Componente reutilizable para las tarjetas de desarrolladores
 const DeveloperCard = ({ name, role, description, skills, imageSrc }) => {
   return (
-    <div className="card w-96 shadow-xl lg:card-compact p-5 bg-black border-x-2 border-red-800">
+    <div className="card w-72 md:w-96 shadow-xl lg:card-compact p-5 bg-black border-x-2 border-red-800">
       <figure>
         <img
           className="w-1/2 h-auto"
@@ -14,7 +14,11 @@ const DeveloperCard = ({ name, role, description, skills, imageSrc }) => {
       <div className="card-body">
         <h2 className="card-title">
           {name}
-          <div className="badge badge-warning">{role}</div>
+          <div className="badge badge-warning p-5 md:p-1">
+            <span className="text-[small] md:text-base leading-[15px]">
+              {role}
+            </span>
+          </div>
         </h2>
         <p>{description}</p>
         <div className="card-actions justify-end">
@@ -62,8 +66,8 @@ export default function AboutUs() {
             />
           </div>
           <div className="flex-1">
-            <h2 className="text-4xl mb-4">Nuestra aplicación</h2>
-            <p className="text-lg">
+            <h2 className="text-4xl mb-4 font-bold">Nuestra aplicación</h2>
+            <p className="text-sm md:text-lg">
               Somos alumnos de la Universidad Autónoma de Tlaxcala (UATx) que
               desarrollamos esta aplicación como prototipo de titulación. La
               aplicación está enfocada en la seguridad de las personas,

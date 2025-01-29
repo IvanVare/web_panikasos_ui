@@ -20,13 +20,7 @@ ul {
   display: flex;
   align-items: center; /* Alinea verticalmente los elementos */
   justify-content: space-between;
-  padding-left: 20px;
   margin: 0;
-}
-
-ul li {
-  display: inline-block;
-  padding-top: 10px;
 }
 
 ul li a {
