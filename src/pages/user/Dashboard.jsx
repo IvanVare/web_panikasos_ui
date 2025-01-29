@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/authContext";
 import { MdOutlineSystemSecurityUpdate } from "react-icons/md";
-import { searchUserById } from "../../api/user/ApiUser.jsx";
+import { searchUserById } from "../../api/user/ApiUser";
 import { LuUserPen } from "react-icons/lu";
 import { RiContactsBook2Line } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
