@@ -3,7 +3,7 @@ import React from "react";
 // Componente reutilizable para las tarjetas de desarrolladores
 const DeveloperCard = ({ name, role, description, skills, imageSrc }) => {
   return (
-    <div className="card w-96 shadow-xl lg:card-compact p-5 bg-black shadow-xl border-x-2 border-red-800">
+    <div className="card w-96 shadow-xl lg:card-compact p-5 bg-black border-x-2 border-red-800">
       <figure>
         <img
           className="w-1/2 h-auto"
