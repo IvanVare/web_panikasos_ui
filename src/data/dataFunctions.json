@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Registro e inicio de sesión",
+    "description": "Cuenta con un registro e inicio sesion de usuarios",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREhtWBwE-WeFhy16El1_7GyorZYtw8lnr0FQ&s"
+  },
+  {
+    "id": 2,
+    "title": "Compatible con google maps",
+    "description": "El receptor puede recibir la ubicación del usuario a través de google maps",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFZqARxffUud35VOjDmcB16GcIgFwfDQPbxg&s"
+  },
+  {
+    "id": 3,
+    "title": "Correo electronico",
+    "description": "Se puede usar con cualquier corre electronico",
+    "image": "https://cdn-icons-png.flaticon.com/512/646/646094.png"
+  },
+  {
+    "id": 4,
+    "title": "Seguridad",
+    "description": "Fuera del registro, toda la informacion ingresada por el usuario se conserva en su dispositivo",
+    "image": "https://cdn-icons-png.flaticon.com/512/345/345535.png"
+  },
+  {
+    "id": 5,
+    "title": "Accesibilidad",
+    "description": "Es una aplicación bastante intuitiva para cualquier usuario",
+    "image": "https://static.vecteezy.com/system/resources/previews/013/633/792/non_2x/accsessibility-icon-universal-accsess-icon-free-vector.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Movilidad",
+    "description": "Consumo unicamente de datos moviles(internet) para ser usada",
+    "image": "https://cdn-icons-png.flaticon.com/512/1612/1612639.png"
+  }
+]
