@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-:root {
-  padding-top: 70px;
-}
-=======
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
->>>>>>> master
