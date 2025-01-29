@@ -1,12 +1,25 @@
 .header {
+<<<<<<< HEAD
   background-color: #000000;
+=======
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.8px);
+  -webkit-backdrop-filter: blur(14.8px);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+>>>>>>> master
   color: rgb(255, 0, 0);
   height: 70px;
   width: 100%;
   left: 0;
   top: 0;
   position: fixed;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   z-index: 1000;
 }
 

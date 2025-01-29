@@ -1,7 +1,11 @@
 .home-content {
   color: aliceblue;
   padding-inline: 30px;
+<<<<<<< HEAD
   padding-block: 30px;
+=======
+  padding-block: 60px;
+>>>>>>> master
   background-color: rgb(43, 43, 43);
 }
 
@@ -33,6 +37,7 @@
     font-weight: 400;
   }
 }
+<<<<<<< HEAD
 
 .home-card {
   display: flex;
@@ -65,3 +70,5 @@
   text-align: center;
   padding-bottom: 10px;
 }
+=======
+>>>>>>> master
