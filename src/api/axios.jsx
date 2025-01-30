@@ -1,5 +1,6 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://snwnvhgo0c.execute-api.us-east-1.amazonaws.com/getway",
+  baseURL:
+    "https://panikasos-service-faf4fph3ekgybrbv.canadacentral-01.azurewebsites.net",
 });
