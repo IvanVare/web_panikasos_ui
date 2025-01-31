@@ -29,7 +29,10 @@ export default function Home() {
                 contactos de confianza y, en caso de emergencia, envía alertas
                 automáticas con tu ubicación y datos importantes. Tu seguridad y
                 la de tus seres queridos es nuestra prioridad.
-                <span> ¡Activa Panika SOS y mantente protegido!</span>
+                <span className="text-lg">
+                  {" "}
+                  ¡Activa Panika SOS y mantente protegido!
+                </span>
               </h4>
             </div>
           </div>
@@ -39,10 +42,16 @@ export default function Home() {
                 PanikaSOS
               </h1>
               <h4>
-                Supongo que para los profesionales es lo mismo que logra loquear
-                esa es un historia gistra a tus contactos de confianza y, en
-                caso de emergencia, envía alertas automáticas con tu ubicación y
-                datos importantes. Tu seguridad y
+                Aplicación móvil gratuita que ofrece una solución confiable y
+                eficiente para situaciones de emergencia. Permite al usuario
+                enviar mensajes automáticos que incluyen su información personal
+                y ubicación actual a sus contactos de confianza a través de
+                correo electrónico. Esta funcionalidad asegura que tus seres
+                queridos sean notificados en caso de cualquier eventualidad.
+                <span className="text-lg">
+                  ¡Recuerda! Tu seguridad es lo más importante, y esta
+                  aplicación está aquí para apoyarte.
+                </span>
               </h4>
             </div>
           </div>
