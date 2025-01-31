@@ -7,7 +7,11 @@ import { IoMdMail } from "react-icons/io";
 import { MdOutlinePassword } from "react-icons/md";
 
 export default function CardLogin() {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const { login, isLogged, role } = useAuth();
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -44,10 +48,10 @@ export default function CardLogin() {
     <div id="cardLogin">
       <div id="card-content">
         <div id="card-title">
-          <h2>Inicia sesión</h2>
+          <h2>Iniciar sesión</h2>
           <div className="underline-title"></div>
         </div>
-        {error && <p>{error}</p>}
+
         <form className="form" onSubmit={onSubmit}>
           <div>
             <label className="input input-bordered input-error flex items-center gap-2">
@@ -55,11 +59,16 @@ export default function CardLogin() {
               <input
                 type="email"
                 className="grow"
-                placeholder="Email"
+                placeholder="Correo electrónico"
                 autoComplete="on"
                 {...register("email", { required: true })}
               />
             </label>
+            {errors.email && (
+              <p className="text-red-600 text-xs font-bold">
+                Correo electrónico necesario
+              </p>
+            )}
           </div>
 
           <div>
@@ -103,9 +112,19 @@ export default function CardLogin() {
                     )}
                   </button>
                 </label>
+                {errors.password && (
+                  <p className="text-red-600 text-xs font-bold">
+                    Contraseña necesaria
+                  </p>
+                )}
               </div>
             </div>
           </div>
+          {error && (
+            <div className="bg-[#ff004c] p-2 text-white rounded-lg">
+              <p>{error}</p>
+            </div>
+          )}
 
           <input
             id="submit-btn"

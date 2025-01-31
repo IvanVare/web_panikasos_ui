@@ -31,6 +31,15 @@ export default function Dashboard() {
     }
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/android/PaniKaSOS_v1.0.apk"; // Ruta dentro de public/
+    link.download = "PaniKaSOS_v1.0.apk"; // Nombre al descargar
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleToUserInfo = () => {
     navigate("/user-info");
   };
@@ -51,7 +60,8 @@ export default function Dashboard() {
 
         <div className="flex space-x-8 mb-8">
           <button
-            className="w-20 h-20 bg-slate-100 text-black  rounded-full shadow-lg flex items-center justify-center hover:scale-110 hover:bg-[rgb(255,0,76)] transition transform"
+            onClick={handleDownload}
+            className="w-20 h-20 bg-slate-100 text-black  rounded-full shadow-lg flex items-center justify-center hover:text-white hover:scale-110 hover:bg-[rgb(255,0,76)] transition transform"
             title="Descargar app"
           >
             <MdOutlineSystemSecurityUpdate className="w-8 h-8" />
@@ -64,7 +74,7 @@ export default function Dashboard() {
             <LuUserPen className="w-8 h-8" />
           </button>
           <button
-            className="btn-disabled w-20 h-20 bg-slate-400  rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition transform"
+            className="btn-disabled w-20 h-20 bg-slate-400  rounded-full shadow-lg flex items-center justify-center  hover:scale-110 transition transform"
             title="Mis contactos"
           >
             <RiContactsBook2Line className="w-8 h-8 text-gray-500" />

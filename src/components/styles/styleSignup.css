@@ -2,10 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: auto;
   height: 100vh;
   background-repeat: no-repeat;
-  background-image: linear-gradient(39deg, #112437, #652d2f, #ad2c24, #f80f0f);
+  background-image: linear-gradient(39deg, #112437, #662437, #ad244d, #f81156);
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -18,9 +18,9 @@
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: 5px 2px 8px rgba(0, 0, 0, 0.65);
-  height: 510px;
-  margin: 6rem auto 8.1rem auto;
-  width: 329px;
+  height: auto;
+  margin: 11rem auto 8.1rem auto;
+  width: 25rem;
   color: rgb(255, 255, 255);
 }
 
@@ -41,7 +41,7 @@
   margin-top: 16px;
   text-align: center;
 }
-.submit-btn {
+.submit-btn-signin {
   background: -webkit-linear-gradient(right, #ff004c, #652d2f);
   border: none;
   border-radius: 21px;
@@ -55,7 +55,7 @@
   transition: 0.25s;
   width: 153px;
 }
-#submit-btn:hover {
+#submit-btn-signin:hover {
   color: rgb(255, 255, 255);
   box-shadow: 0px 1px 18px #f1f1f1;
 }
