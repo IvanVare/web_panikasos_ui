@@ -49,8 +49,7 @@ export default function AboutUs() {
       description:
         "Jennifer es una desarrolladora creativa con pasión por el desarrollo de interfaces, con año y medio de experiencia.",
       skills: ["Design", "UI/UX"],
-      imageSrc:
-        "https://t3.ftcdn.net/jpg/03/94/89/90/360_F_394899054_4TMgw6eiMYUfozaZU3Kgr5e0LdH4ZrsU.jpg",
+      imageSrc: "https://cdn-icons-png.flaticon.com/512/146/146025.png",
     },
   ];
 

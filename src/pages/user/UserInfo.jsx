@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa";
+import { FaPersonCane } from "react-icons/fa6";
 import { searchUserById, updateUser } from "../../api/user/ApiUser";
 import { useAuth } from "../../context/authContext";
 import { useForm } from "react-hook-form";
@@ -42,8 +43,6 @@ export default function UserInfo() {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      console.log(data.age);
-
       const update = await updateUser({
         id: userData.id,
         firstName: data.firstName,
@@ -96,9 +95,9 @@ export default function UserInfo() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Skills Board */}
 
-          <div className="col-span-1 bg-white rounded-lg shadow-md p-4">
+          <div className="col-span-1 bg-white rounded-lg shadow-md p-7 mt-16 lg:mt-0">
             <div className="text-center justify-center items-center flex flex-col mb-4">
-              <h2 className="text-lg font-semibold">
+              <h2 className="text-lg font-semibold text-black">
                 Modificar datos de usuario
               </h2>
               <div className="w-24 h-24 p-4 text-black flex  rounded-full justify-center shadow-lg items-center bg-slate-100">
@@ -109,7 +108,9 @@ export default function UserInfo() {
 
           <div className="col-span-2 bg-white rounded-lg shadow-md p-4">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold">Información del usuario</h2>
+              <h2 className="text-lg font-semibold text-black">
+                Información del usuario
+              </h2>
             </div>
             <div className="space-y-2">
               <label className="input input-bordered flex items-center gap-2">
@@ -156,11 +157,12 @@ export default function UserInfo() {
                 <label className="block mb-1 text-sm text-slate-600">
                   Edad actual
                 </label>
-                <div className="relative ">
+                <div className="relative">
                   <button
-                    className="absolute right-9 top-1 rounded bg-slate-800 p-1.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none "
+                    className="absolute right-9 top-1 rounded bg-slate-800 p-1.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     type="button"
                     onClick={handleDecrease}
+                    aria-label="Disminuir edad"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -172,40 +174,33 @@ export default function UserInfo() {
                     </svg>
                   </button>
 
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="absolute w-5 h-5 top-2.5 left-2.5 text-slate-600"
-                  >
-                    <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"></path>
-                  </svg>
-
+                  <FaPersonCane className="absolute w-5 h-5 top-2.5 left-2.5 text-black" />
                   <input
                     type="number"
-                    min="0"
+                    inputMode="numeric"
+                    min="1"
                     max="99"
                     value={count}
-                    {...register("age", { required: true })}
-                    step="1"
                     className="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-10 pr-20 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    onChange={(e) => setCount(Number(e.target.value))}
                   />
                   <button
-                    class="absolute right-1 top-1 rounded bg-slate-800 p-1.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    className="absolute right-1 top-1 rounded bg-slate-800 p-1.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     type="button"
                     onClick={handleIncrease}
+                    aria-label="Aumentar edad"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
                       fill="currentColor"
-                      class="w-4 h-4"
+                      className="w-4 h-4"
                     >
                       <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
                     </svg>
                   </button>
                 </div>
-                <p class="flex items-center mt-2 text-xs text-slate-400">
+                <p className="flex items-center mt-2 text-xs text-slate-900">
                   Modifica tu edad en el campo de arriba
                 </p>
               </div>
@@ -214,18 +209,12 @@ export default function UserInfo() {
 
           {/* Candidates Review */}
           <div className="col-span-2 bg-white rounded-lg shadow-md p-4">
-            <h2 className="text-lg font-semibold mb-4">Opciones</h2>
-            <div className="">
-              <button
-                className="btn btn-outline btn-warning"
-                onClick={handleCancel}
-              >
+            <h2 className="text-lg font-semibold mb-4 text-black">Opciones</h2>
+            <div className="grid grid-cols-2 gap-4 mx-[5%]">
+              <button className="btn btn-warning " onClick={handleCancel}>
                 Cancelar
               </button>
-              <button
-                className="btn btn-outline btn-success"
-                onClick={onSubmit}
-              >
+              <button className="btn btn-success " onClick={onSubmit}>
                 Guardar
               </button>
             </div>

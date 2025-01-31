@@ -41,9 +41,10 @@ export function AuthProvider({ children }) {
     checkLogin();
   }, []);
 
-  //Registrar usuario
+  //Registrar usuarioa
   const register = async (user) => {
     try {
+      setLoading(true);
       const response = await axiosBase.post("/api/auth/register", user, {
         headers: { "Content-Type": "application/json" },
         withCredentials: false,
@@ -51,8 +52,10 @@ export function AuthProvider({ children }) {
       console.log("Registered user");
       return true;
     } catch (error) {
-      console.log(error);
-      setErrors(error.response.data);
+      setErrors(error.response.data.message);
+      return false;
+    } finally {
+      setLoading(false);
     }
   };
 

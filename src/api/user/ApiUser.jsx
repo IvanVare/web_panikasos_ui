@@ -22,7 +22,7 @@ export async function updateUser(data) {
     const response = await axiosBase.put(`/api/user/update`, data, {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `${token}`,
+        Authorization: `${sessionStorage.getItem("token")}`,
       },
       withCredentials: false,
     });

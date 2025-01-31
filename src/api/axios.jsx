@@ -1,5 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://ec2-3-82-247-114.compute-1.amazonaws.com:3331",
+  //baseURL: "http://localhost:3331",
+  baseURL:
+    "https://panikasos-service-faf4fph3ekgybrbv.canadacentral-01.azurewebsites.net",
 });

@@ -14,7 +14,6 @@ export default function CardRegister() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
   const {
     register: registerUser,
     isLogged,
@@ -32,8 +31,12 @@ export default function CardRegister() {
         ...values,
         status: 1,
       };
-      registerUser(user);
-      navigate("/login");
+      const isRegistered = await registerUser(user);
+      if (isRegistered) {
+        navigate("/dashboard");
+      } else {
+        console.log("Error");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -47,16 +50,12 @@ export default function CardRegister() {
 
   return (
     <>
-      <div id="cardSignup" className="px-11 py-3">
+      <div id="cardSignup" className=" px-11 py-3">
         <div id="card-title">
           <h2>Bienvenido</h2>
           <div className="underline-title"></div>
         </div>
-        {registerErrors.map((error, i) => (
-          <div className="bg-red-600 p-2 text-white" key={i}>
-            {error}
-          </div>
-        ))}
+
         <form className="form grid gap-3" onSubmit={onSubmit}>
           <div>
             <label className="input input-bordered input-error flex items-center gap-2">
@@ -75,6 +74,11 @@ export default function CardRegister() {
                 {...register("firstName", { required: true })}
               />
             </label>
+            {errors.firstName && (
+              <p className="text-red-600 text-xs font-bold">
+                El campo Nombre es requerido
+              </p>
+            )}
           </div>
           <div>
             <label className="input input-bordered input-error flex items-center gap-2">
@@ -93,6 +97,11 @@ export default function CardRegister() {
                 {...register("lastName", { required: true })}
               />
             </label>
+            {errors.lastName && (
+              <p className="text-red-600 text-xs font-bold">
+                El campo Apellido es requerido
+              </p>
+            )}
           </div>
           <div>
             <label className="input input-bordered input-error flex items-center gap-2">
@@ -104,6 +113,11 @@ export default function CardRegister() {
                 {...register("phoneNumber", { required: true })}
               />
             </label>
+            {errors.phoneNumber && (
+              <p className="text-red-600 text-xs font-bold">
+                El campo Número telefonico telefonico es requerido
+              </p>
+            )}
           </div>
 
           <div>
@@ -118,6 +132,11 @@ export default function CardRegister() {
                 {...register("age", { required: true })}
               />
             </label>
+            {errors.age && (
+              <p className="text-red-600 text-xs font-bold">
+                El campo Edad es requerido
+              </p>
+            )}
           </div>
 
           <div>
@@ -126,10 +145,15 @@ export default function CardRegister() {
               <input
                 type="email"
                 className="grow"
-                placeholder="Email"
+                placeholder="Correo electrónico"
                 {...register("email", { required: true })}
               />
             </label>
+            {errors.email && (
+              <p className="text-red-600 text-xs font-bold">
+                El campo Correo electrónico es requerido
+              </p>
+            )}
           </div>
 
           <div className="max-w-sm ">
@@ -172,15 +196,25 @@ export default function CardRegister() {
                   )}
                 </button>
               </label>
+              {errors.password && (
+                <p className="text-red-600 text-xs font-bold">
+                  El campo Contraseña es requerido
+                </p>
+              )}
             </div>
           </div>
-
+          {registerErrors.length > 0 ? (
+            <div className="bg-[#ff004c] p-2 text-white rounded-lg mb-4">
+              <p>{registerErrors}</p>
+            </div>
+          ) : null}
           <div className="text-center justify-center items-center">
             <input
+              id="submit-btn-signin"
               type="submit"
               name="submit"
               value="Registrar"
-              className="submit-btn mb-7"
+              className="submit-btn-signin mb-7"
             />
             <br />
             <a href="/login" id="signup">

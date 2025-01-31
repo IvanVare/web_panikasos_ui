@@ -29,12 +29,13 @@ export default function Functions() {
             <span className="font-bold">
               Algunas de las funciones que la aplicación ofrece incluyen una
               variedad de herramientas diseñadas para mejorar la seguridad y la
-              comunicación de los usuarios. Entre ellas se encuentran:
+              comunicación de los usuarios.
             </span>
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-xl">
+      <span className="font-bold text-2xl mt-6">Principales funciones</span>
+      <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-6 max-w-screen-xl">
         {dataFunctions.map((cdfunctions) => (
           <div className="col cards-container-div " key={cdfunctions.id}>
             <CardFunctions
